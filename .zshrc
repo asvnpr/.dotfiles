@@ -83,25 +83,20 @@ source $ZSH/oh-my-zsh.sh
 
 #alias to activate ethernet connection. should create script for this
 #alias eth="nmcli con up enp0s25"
-#alias for the android studio IDE:
-#alias studio="studio.sh &"
 #alias to activate hotspot connection. sometimes doesn't work for some reason
 #alias thc="nmcli con up THC_ONE_m7"
 #alias tor="./ /home/asvnpr/Downloads/tor-browser_en-US/start-tor-browser.desktop"
 ##executes python script (not made by me. credit to olemartinorg) to automate the window layout/orientation on startup
 #./Downloads/i3-alternating-layout/alternating_layouts.py &
 
-
-
-
-#has my hotspot passwd in plain text, but I only use it for my hotspot so no risk here I guess.
-#alias con_thc="nmcli dev wifi con THC_ONE_m7 password starkiller18A
-
-
-#needed to use the pebble sdk
-#export PATH=~/Documents/pebble-devel/PebbleSDK-3.4/bin:$PATH
-
 #path for postgres command line tools
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 alias sml="rlwrap /usr/local/bin/sml"
 eval "$(thefuck --alias)"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export HOMEBREW_CASK_OPTS="--caskroom=/opt/homebrew-cask/Caskroom"
+alias pip3-update="pip3 list --outdated | cut -d ' ' -f1 | xargs -n1 pip install -U"
+# Latex setup for macOS
+export PATH=$PATH:/Library/TeX/texbin/
+export Path=$PATH:/Library/TeX/Root/bin/x86_64-darwin
+source /usr/local/share/antigen/antigen.zsh
