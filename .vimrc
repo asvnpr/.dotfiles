@@ -30,6 +30,9 @@ Bundle 'tpope/vim-fugitive'
 
 " "adds file browser to vim
 Bundle 'scrooloose/nerdtree'
+
+" " use same keystrokes for tmux and vim splits
+Bundle 'christoomey/vim-tmux-navigator'
 " " The following are examples of different formats supported.
 " " Keep Plugin commands between vundle#begin/end.
 " " plugin on GitHub repo
@@ -137,3 +140,13 @@ set cpo-=<
 set wcm=<c-z>
 map <f4> :emenu <c-z>
 ""--- End sweet menu
+
+" --- enable one keystroke vim splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+"--- split bottom and right instead of default
+set splitbelow
+set splitright

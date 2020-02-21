@@ -1,4 +1,11 @@
-#config_files
+# config_files
 
-Currently contains my zshrc, vimrc, and my i3wm config files
+dotfiles for:
+- fish shell
+- tmux
+- i3-wm
+- vim
+- bash 
+- some conda envs
 
+Currently managed using [dotbot](https://github.com/anishathalye/dotbot)
